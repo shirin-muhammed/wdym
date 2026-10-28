@@ -1,15 +1,6 @@
-@import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,4 +39,38 @@ body {
     animation: none;
     opacity: 1;
   }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home svg {
+  width: min(420px, 80vw);
+  height: auto;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.soon {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin: 0;
 }
