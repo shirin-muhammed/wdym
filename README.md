@@ -16,3 +16,7 @@ npm run build && npm start
 ## Deploy (Hostinger Node.js hosting)
 
 Build command `npm run build`, start command `npm start`, Node 20+. Point `wdym.in` at the app in hPanel.
+
+## Logo video
+
+`public/logo-reveal.mp4` is rendered with [OpenMontage](https://github.com/calesthio/OpenMontage)'s Remotion composer from `video/logo-reveal.tsx`. To re-render: copy that file into `remotion-composer/src/` and run `npx remotion render src/logo-reveal.tsx LogoReveal out/logo-reveal.mp4`.
