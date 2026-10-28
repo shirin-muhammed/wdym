@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.glyph {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: glyph-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes glyph-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.6) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glyph {
+    animation: none;
+    opacity: 1;
+  }
+}
